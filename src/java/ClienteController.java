@@ -34,13 +34,14 @@ ClienteModell clientemodell;
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             clientemodell=new ClienteModell();
-            
+             
             clientemodell.setCodigo(request.getParameter("codigo"));
             clientemodell.setNombre(request.getParameter("nombre"));
             clientemodell.setApellido(request.getParameter("apellido"));
             clientemodell.setDireccion(request.getParameter("direccion"));
             clientemodell.setCorreo(request.getParameter("correo"));
             clientemodell.setTelefono(request.getParameter("telefono"));
+            
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -55,6 +56,8 @@ ClienteModell clientemodell;
             out.println("<h1>" + clientemodell.getDireccion() +  "</h1>");
             out.println("<h1>" + clientemodell.getCorreo() +  "</h1>");
             out.println("<h1>" + clientemodell.getTelefono() +  "</h1>");
+            
+            out.println("<a href=\"http://localhost:8081/Wally0909-17-13868/ \" >VOLVER AL INICIO</a>");
             out.println("</body>");
             out.println("</html>");
         }
